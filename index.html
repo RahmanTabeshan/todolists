@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.css" >
+    <link rel="stylesheet" href="./css/todo.css">
+    <title>to do list</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-list">
+            <div class="todo-list-header">
+                <div class="modal-menu">
+                    <i class="far fa-bars" ></i>
+                </div>
+                <div class="header-fix">
+                    وظایف روزانه
+                </div> 
+            </div>
+            <div class="todo-list-body">
+                <ul class="list"> 
+                </ul>
+            </div>
+        </div>
+        <div class="add btn-show" title="افزودن" >
+            <i class="fal fa-pencil-alt fa-lg"></i>
+        </div>
+        <div class="modal hide">
+            <div class="task-form">
+                <input type="text" class="subject" placeholder="لطفا موضوع را وارد کنید" >
+                <input type="text" class="description" placeholder="لطفا توضیحات را وارد کنید" >
+                <button class="btn btn-add" title="افزودن" >
+                    <i class="fas fa-plus-circle"></i>
+                </button>
+            </div>
+        </div>
+        <div class="category-modal unvisible">
+            <div class="header" >دسته بندی ها : </div>
+            <ul>
+                <li class="all">
+                    <div>همه</div>
+                    <span>0</span>
+                </li>
+                <li class="completed">
+                    <div>انجام شده</div>
+                    <span>0</span>
+                </li>
+                <li class="uncompleted">
+                    <div>انجام نشده</div>
+                    <span>0</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./javascript/converter.js"></script>
+    <script src="./javascript/todo.js"></script>
+</body>
+</html>

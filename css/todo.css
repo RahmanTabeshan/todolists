@@ -1,0 +1,498 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    min-height: 100vh ;
+	line-height: 1 ;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input:focus {
+	outline: none ;
+}
+* {
+    box-sizing: border-box ;
+}
+/* End Css Reset ********************************************************************************** */
+@font-face {
+	font-family : 'irsans' ;
+	src : url('../Font/IRANSansWeb.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'irsans_fn' ;
+	src : url('../Font/IRANSansWeb_FaNum.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_FaNum.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_FaNum.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_FaNum.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'msans' ;
+	src : url('../Font/IRANSansWeb_Medium.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Medium.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Medium.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Medium.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'msans_fn' ;
+	src : url('../Font/IRANSansWeb_Medium_FaNum.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Medium_FaNum.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Medium_FaNum.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Medium_FaNum.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'Bsans' ;
+	src : url('../Font/IRANSansWeb_Black.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Black.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Black.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Black.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'Bsans_fn' ;
+	src : url('../Font/IRANSansWeb_Black_FaNum.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Black_FaNum.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Black_FaNum.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Black_FaNum.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'bsans' ;
+	src : url('../Font/IRANSansWeb_Bold.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Bold.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Bold.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Bold.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'bsans_fn' ;
+	src : url('../Font/IRANSansWeb_Bold_FaNum.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Bold_FaNum.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Bold_FaNum.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Bold_FaNum.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'Lsans' ;
+	src : url('../Font/IRANSansWeb_Light.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Light.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Light.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Light.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'Lsans_fn' ;
+	src : url('../Font/IRANSansWeb_Light_FaNum.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_Light_FaNum.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_Light_FaNum.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_Light_FaNum.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'ULsans' ;
+	src : url('../Font/IRANSansWeb_UltraLight.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_UltraLight.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_UltraLight.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_UltraLight.woff2') format('woff2') ;
+}
+@font-face {
+	font-family : 'ULsans_fn' ;
+	src : url('../Font/IRANSansWeb_UltraLight_FaNum.ttf') format('ttf') ;
+	src : url('../Font/IRANSansWeb_UltraLight_FaNum.eot') format('eot') ;
+	src : url('../Font/IRANSansWeb_UltraLight_FaNum.woff') format('woff') ;
+	src : url('../Font/IRANSansWeb_UltraLight_FaNum.woff2') format('woff2') ;
+}
+/*End Font********************************************************************************* */ 
+body {
+    display : flex ; 
+    align-items: center ;
+    justify-content: center ;
+    font-family: 'irsans';
+}
+div.container {
+    position : relative ;
+    width : 34rem ;
+    min-height: 30rem ;
+    border-radius: 5px ;
+    box-shadow: 0 0 10px -4px ;
+    overflow: hidden ;
+    margin : 10px ;
+	direction: rtl ;
+}
+div.container div.todo-list {
+    display : flex ; 
+    align-items: center ;
+    flex-direction: column ;
+    width : 100% ;
+}
+div.todo-list div.todo-list-header {
+	position : relative ;
+    width : 100% ;
+    text-align: center ;
+	background: #282828 ;
+	box-shadow: 0 1px 5px -3px #fff;
+	z-index: 10 ;
+}
+div.todo-list-header div.modal-menu {
+	display: flex ;
+	justify-content: center ;
+	align-items: center ;
+	position: absolute;
+	right: 20px;
+	top: 8px;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	color: #fff;
+	font-size: x-large ;
+}
+div.todo-list-header div.header-fix {
+    color: #fff;
+    width : 96% ;
+    margin: 0 auto ;
+    padding: 15px 10px;
+}
+div.todo-list div.todo-list-body {
+    width : 100% ;
+	max-height: 30.3rem ;
+	height: 30.3rem ;
+	overflow-y: auto ;
+	padding : 10px 0 ;
+	background: #4d4d4d ;
+}
+div.todo-list-body ul.list {
+    display: flex ;
+    flex-direction: column ;
+    width : 96% ;
+    margin: 0 auto ;
+	padding: 0 20px;
+}
+ul.list li.list-item {
+    display : flex ;
+	flex-direction: column ;
+	gap : 7px ;
+    padding: 10px 10px ;
+    border-radius: 5px ;
+    background: #fff ;
+    color: #423737 ;
+    font-size: .81rem;
+}
+li.list-item div:first-child {
+	display: flex ;
+	justify-content: space-between ;
+	align-items: center ;
+}
+li.list-item div.description {
+	padding: 0 20px ;
+	font-size: .7rem;
+}
+li.list-item:not(:first-child) {
+	margin-top: 10px ;
+}
+li.list-item div.operator {
+    font-size: 1rem ;
+}
+li.list-item div.title {
+	width : 5rem ;
+}
+ul.list li.list-empty {
+	padding : 10px 0 ;
+	font-size: .9rem ;
+	color : #fff ;
+	text-align: center ;;
+}
+div.operator {
+	display: flex ;
+}
+div.operator i.fa-trash-alt {
+    color: #a61717 ;
+    cursor :pointer ;
+}
+div.operator i.fa-file-edit {
+    margin-left: 15px ;
+    color: #165316 ;
+    cursor: pointer ;
+}
+div.date {
+	font-size: 11px ;
+}
+div.state{
+	font-size: 12px ;
+	cursor: pointer ;
+}
+div.completed {
+	position: relative ;
+	color : green ;
+}
+div.uncomplete {
+	position: relative ;
+	color : #c80000 ;
+}
+div.completed::after {
+	font-family: "Font Awesome 5 Pro";
+	content : "\f00c" ;
+	font-size: 20px;
+	position: absolute;
+	left: -16px;
+	bottom: -8px;
+}
+div.uncomplete::after {
+	font-family: "Font Awesome 5 Pro";
+	content : "\f00d" ;
+	font-size: 20px;
+	position: absolute;
+	left: -11px;
+	bottom: -8px;
+}
+div.todo-list-body div.date {
+	display: flex ;
+	align-items: center;
+	padding-top: 3px ;
+}
+div.container div.add {
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    position : absolute ;
+    bottom : 4% ;
+    right : 4% ;
+    width : 3rem  ;
+    height : 3rem ;
+    color : #165316 ;
+	background: #f5f5f5 ;
+    border-radius : 50% ;
+    cursor: pointer ;
+    font-size: 1.2rem;
+    transition: all .3s ;
+}
+div.add:hover {
+    bottom : 5% !important ;
+    transition: all .5s !important ;
+    transition-delay: 0.2s !important ;
+}
+div.container div.modal {
+	z-index: 10 ;
+	display: none ;
+	position: absolute ;
+	top: -160px ;
+	width: 100% ;
+	background: #383838 ;
+	direction: rtl ;
+}
+div.modal div.task-form	{
+	display: flex ;
+	flex-direction: column ;
+	align-items: center ;
+	width: 96% ;
+	margin: 0 auto ;
+	padding: 15px 0 ;
+	font-family: 'irsans' ;
+}
+div.task-form input {
+	width: 80% ;
+	padding: 8px 5px ;
+	margin-bottom: 10px ;
+	font-family: 'irsans' ;
+	border: 1px solid #90b390 ;
+	border-radius: 5px ;
+}
+div.task-form input:focus {
+	border: 1px solid #0b8f0b ;
+}
+div.task-form button {
+	border : none ;
+	width : 5rem ;
+	cursor: pointer ;
+	padding: 5px 0 ;
+	font-size: 1.1rem ;
+	color: #114e02 ;
+	background: #05d805 ;
+	border-radius: 5px ;
+	transition: all .3s ;
+}
+div.task-form button:hover {
+	background: #1d8f01 ;
+	color: #05cf05 ;
+}
+div.container div.category-modal {
+	display: none ;
+	position: absolute ;
+	bottom: 0 ;
+	width : 35% ;
+	/*height: 91.4% ;*/
+	background: #383838 ;
+	color : #fff ;
+	z-index: 10 ;
+}
+div.category-modal div.header {
+	font-size : .85rem ;
+	padding : 10px 5px ;
+}
+div.category-modal ul {
+	padding: 10px 20px ;
+}
+div.category-modal ul li {
+	display: flex ;
+	justify-content: space-between ;
+	align-items: center ;
+	margin-bottom: 20px ;
+	font-size: .8rem ;
+}
+div.category-modal ul li > div {
+	cursor: pointer ;
+}
+div.category-modal ul li > span {
+	display: flex ;
+	align-items : center ;
+	justify-content : center ;
+	width : 21px ;
+	height : 21px ;
+	padding-top: 2px ;
+	border-radius: 50% ;
+	color: black ;
+	background: #fff ;
+}
+.unvisible {
+	animation: left-to-right .5s ;
+	animation-fill-mode: forwards ;
+}
+.visible {
+	animation: right-to-left .5s ;
+	animation-fill-mode: forwards ;
+}
+.show {
+	animation: show .5s ;
+	animation-fill-mode: forwards ;
+}
+.hide {
+	animation: hide .5s ;
+	animation-fill-mode: forwards ;
+}
+@-moz-keyframes show {
+	from{
+		top : -160px ;
+	}
+	to {
+		top : 0px ;
+	}
+}
+@keyframes show {
+	from{
+		top : -160px ;
+	}
+	to {
+		top : 0px ;
+	}
+}
+@-moz-keyframes hide {
+	from{
+		top : 0px ;
+	}
+	to {
+		top : -160px  ;
+	}
+}
+@keyframes hide {
+	from{
+		top : 0px ;
+	}
+	to {
+		top : -160px  ;
+	}
+}
+@keyframes right-to-left {
+	from {
+		right : -195px ;
+	}
+	to {
+		right : 0 ;
+	}
+}
+@-moz-keyframes right-to-left {
+	from {
+		right : -195px ;
+	}
+	to {
+		right : 0 ;
+	}
+}
+@keyframes left-to-right {
+	from {
+		right : 0px ;
+	}
+	to {
+		right : -195px ;
+	}
+}
+@-moz-keyframes left-to-right {
+	from {
+		right : 0px ; 
+	}
+	to {
+		right : -195px ;
+	}
+}
+@media screen and (max-width:500px) {
+	.container {
+		align-self: flex-start ;
+		height : 90vh !important ;
+		margin : 5px !important ;
+	}
+	.todo-list {
+		height : 100% !important ;
+	}
+	.todo-list-body {
+		max-height: 100% !important ;
+		height : 100% !important ;
+	}
+	ul.list {
+		padding : 0 5px !important ;
+		width : 98% !important ;
+	}
+	li.list-item {
+		padding: 10px 5px !important ;
+	}
+	div.state , div.date {
+		font-size: .8rem !important;
+	}
+	div.operator {
+		font-size: 1.5rem !important;
+	}
+	div.operator i.fa-file-edit {
+		margin-left: 8px !important ;
+	}
+	div.category-modal {
+		width : 50% !important ;
+	}
+}
